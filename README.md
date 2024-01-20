@@ -1,2 +1,2 @@
-# CRUD-MongoDB-NodeJS
- Performs CRUD operations using NoSQL(MongoDB) to manage clients data in the database
+# Mongoose-NodeJS-CRUD
+ Performs CRUD operations using NoSQL(MongoDB) to manage client's data in the database.
