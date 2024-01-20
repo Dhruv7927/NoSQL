@@ -1,2 +1,2 @@
-# CRUD_MongoDB_NodeJS
- This app manages the information given by the client. It does CRUD operations with NoSQL(MongoDB)
+# CRUD-MongoDB-NodeJS
+ Performs CRUD operations using NoSQL(MongoDB) to manage clients data in the database
