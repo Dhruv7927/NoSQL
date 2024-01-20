@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= product.name %></title>
+    <style>
+        .container{
+            width: 500px;
+            height: 400px;
+            background-color: rgb(161, 145, 145);
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            font-size: 30px;
+        }
+        .role{
+            text-decoration: none;
+            color: rgb(186, 45, 45);
+        }
+        .delete{
+            width: 490px;
+            height: 40px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(186, 45, 45);
+            color: white;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+        .option{
+            width: 243px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: rgb(186, 45, 45);
+        }
+        .buttonOpt{
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+        }
+        button:hover{
+            background-color: rgb(151, 34, 34);
+        }
+        .role:hover{
+            color: rgb(246, 4, 4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><%= product.name %></h1>
+        <div class="info">
+            <p>The Identification Number <%= product.name %> is <%= product.identification %></p>
+            <p>The Role is: <a class="role" href="/product?category=<%= product.category %>"><%= product.category %></a></p>
+            <br><br>
+            <button class="option"><a class="buttonOpt" href="/product">Display All</a></button>
+            <button class="option"><a class="buttonOpt" href="/product/<%= product._id %>/edit">Edit </a></button>
+            <form action="/product/<%= product._id %>?_method=DELETE" method="post">
+                <button class="delete">Delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

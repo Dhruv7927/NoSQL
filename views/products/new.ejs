@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 400px;
+            background-color: rgb(161, 145, 145);
+            margin: auto;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            font-size: 25px;
+        }
+        input,select{
+            width: 490px;
+            height: 30px;
+            margin: auto;
+            border-radius: 5px;
+        }
+        button{
+            width: 490px;
+            height: 40px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(186, 45, 45);
+            color: white;
+            font-size: 30px;
+        }
+        button:hover{
+            width: 490px;
+            height: 40px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(151, 34, 34);
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Details</h1>
+        <div class="inputDetails">
+            <form action="/product/new" method="post">
+                <label for="name">Name:</label><br />
+                <input type="text" name="name" id="name" placeholder="Enter your Name"><br /><br />
+                <label for="id">ID Number: </label><br />
+                <input type="number" name = 'identification' id = 'identification' placeholder="Enter your ID"><br /><br />
+                <label for="category">Select your role:</label><br />
+                <select name="category" id="category">
+                    <% for(let category of ['Faculty', 'Student', 'Admin']){ %>
+                        <option value="<%= category %>"><%= category %></option>
+                    <% } %>
+                </select><br /><br />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
