@@ -11,5 +11,5 @@ p.save()
 .then(()=>console.log('IT WORKED'))
 .catch(err=> {
     console.log('IT FAILED')
-    console.lof(err)
+    console.log(err)
 })

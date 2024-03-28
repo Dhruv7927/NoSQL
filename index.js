@@ -24,8 +24,8 @@ app.use(methodOverride('_method'));
 
 app.use(express.urlencoded({extended : true}));
 
-app.listen(3000 , ()=>{
-    console.log('APP IS LISTENING TO PORT 3000');
+app.listen(8000 , ()=>{
+    console.log('APP IS LISTENING TO PORT 8000');
 });
 
 app.get('/product' , async (req , res)=>{
