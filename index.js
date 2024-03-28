@@ -11,7 +11,8 @@ const Product = require('./models/product');
 
 const categories = ['fruit' , 'vegetable' , 'diary' ];
 
-mongoose.connect('mongodb://127.0.0.1:27017/Shop')
+mongoose.connect(process.env.MONGO_URL)
+// mongoose.connect('mongodb://127.0.0.1:27017/Shop')
 .then(()=>console.log('MONGOOSE CONNECTION SUCCESSUL'))
 .catch(err => {
     console.log('MONGOOSE CONNECTION FAILED');
